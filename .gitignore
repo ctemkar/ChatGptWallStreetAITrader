@@ -1,0 +1,36 @@
+.env
+.env.local
+.env.*.local
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+trade_plan.csv
+
+# --- Secrets / credentials (never commit; this repo is PUBLIC) ---
+.env*
+!.env.example
+!.env.template
+*.pem
+*key*
+*secret*
+*credential*
+
+# --- Backups ---
+*.bak*
+
+# --- Python / tooling caches ---
+*.pyc
+venv/
+node_modules/
+.DS_Store
+
+# --- Runtime output ---
+logs/
+state/
+data/
+*.log
+*.jsonl
+*.sqlite
+*.db
+*.csv

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wallstreet-ls"
+version = "0.1.0"
+description = "Paper-first, market-neutral U.S. equity long/short strategy for Alpaca"
+requires-python = ">=3.11"
+dependencies = [
+  "alpaca-py>=0.42.0",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+wallstreet-ls = "wallstreet_ls.cli:main"
+wallstreet-ls-backtest = "wallstreet_ls.backtest_cli:main"
+wallstreet-ls-news = "wallstreet_ls.news_cli:main"
+wallstreet-ls-scalper-backtest = "wallstreet_ls.scalping_cli:main"
+wallstreet-ls-dashboard-sync = "wallstreet_ls.dashboard_snapshot:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
