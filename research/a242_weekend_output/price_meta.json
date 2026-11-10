@@ -1,0 +1,7 @@
+{
+  "source": "Yahoo Finance chart API v8 daily bars, merged onto the prior research cache through 2026-11-06",
+  "refreshed_through_request": "2026-11-11",
+  "downloaded_at_utc": "2026-11-10T01:06:16.360109+00:00",
+  "last_session": "2026-11-09",
+  "first_session": "2004-01-02"
+}

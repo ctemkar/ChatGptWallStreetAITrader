@@ -1,5 +1,7 @@
 # Weekend hold versus flatten
 
+The A242 result is in `research/a242_weekend_hold_2026-11-10.md`. This note is the earlier proxy, before the sanitized AlpacaLive-A242 source was available. It is not the A242 verdict.
+
 Research only. No orders, no broker connection, no account keys, and no change to strategy configuration.
 
 ## Verdict

@@ -1,0 +1,579 @@
+{
+  "identity": {
+    "strategy": "a242",
+    "source": "sanitized AlpacaLive-A242 snapshot collected 2026-11-08, base git 09b6fe0 plus uncommitted CLI/config/adapter/runner",
+    "parameters": {
+      "long_count": 4,
+      "short_count": 0,
+      "momentum_lookback": 252,
+      "momentum_skip": 3,
+      "volatility_lookback": 20,
+      "gross_exposure_config": 1.9,
+      "engine_long_budget": 0.95,
+      "engine_note": "calculate_targets sets each side's budget to gross/2. With shorts excluded, only the 0.95 long budget is invested. Live Nov 6 target weights sum to 0.95.",
+      "max_position_weight": 0.4,
+      "target_annual_volatility": 0.3,
+      "adjustment": "Alpaca Adjustment.ALL on a rolling ~400-day window. This study uses Yahoo adjusted OHLC, rescaled so the decision close equals the tradeable close.",
+      "orders": "Continuous runner. Through 2026-10-31 it could submit extended-hours limits when the cash session was closed. The Nov 1 gate refuses submits outside regular hours. Regular-hours orders are market DAY orders, not market-on-close.",
+      "rebalance_floor": "max($5, 2% of position notional); entries, exits, and flips always pass",
+      "reentry_cooldown_trading_days": 3
+    },
+    "not_used": "Plan sizing_equity is not account equity. Verified marks are 2026-10-08 close $2,270.23 and 2026-11-09 $2,177.44."
+  },
+  "price_meta": {
+    "source": "Yahoo Finance chart API v8 daily bars, merged onto the prior research cache through 2026-11-06",
+    "refreshed_through_request": "2026-11-11",
+    "downloaded_at_utc": "2026-11-10T01:06:16.360109+00:00",
+    "last_session": "2026-11-09",
+    "first_session": "2004-01-02"
+  },
+  "signal_validation_2026_11_06": {
+    "AMD": {
+      "signal": 0.09023418991974108,
+      "plan_target": 0.09018950665625258
+    },
+    "CVX": {
+      "signal": 0.32503144255709865,
+      "plan_target": 0.3241945155168444
+    },
+    "MRK": {
+      "signal": 0.25383327366207076,
+      "plan_target": 0.2537774464529806
+    },
+    "XOM": {
+      "signal": 0.2809010938610895,
+      "plan_target": 0.28183853137392234
+    }
+  },
+  "history_on_2200": {
+    "hold_bps0_feenone": {
+      "ending": 331182.8973219382,
+      "pnl_vs_2200": 328982.8973219382,
+      "first_invested": "2005-01-04",
+      "slippage": 0.0,
+      "reg": 0.0,
+      "traded": 41396167.21520163,
+      "full": {
+        "available": true,
+        "start": "2005-01-04",
+        "end": "2026-11-06",
+        "n": 5496,
+        "equity_start": 2142.1945766408285,
+        "equity_end": 331182.8973219382,
+        "pnl": 329040.70274529734,
+        "total_return": 153.59982063873278,
+        "max_drawdown": -0.49893411853066927,
+        "sharpe_zero_rf": 1.1478103386611005,
+        "years": 21.83709787816564,
+        "mean_gross_weight": 0.8834508378391075
+      },
+      "holdout": {
+        "available": true,
+        "start": "2023-01-03",
+        "end": "2026-10-07",
+        "n": 944,
+        "equity_start": 83712.80248782283,
+        "equity_end": 349608.68213017663,
+        "pnl": 265895.8796423538,
+        "total_return": 3.176286920761397,
+        "max_drawdown": -0.31982642720944654,
+        "sharpe_zero_rf": 1.6006129377460425,
+        "years": 3.759069130732375,
+        "mean_gross_weight": 0.8873491221280668
+      },
+      "live_scale_window": {
+        "available": true,
+        "start": "2026-10-08",
+        "end": "2026-11-06",
+        "n": 22,
+        "equity_start": 348734.90080284723,
+        "equity_end": 331182.8973219382,
+        "pnl": -17552.003480909043,
+        "total_return": -0.05033050446198917,
+        "max_drawdown": -0.086065110210362,
+        "sharpe_zero_rf": null,
+        "years": 0.07939767282683094,
+        "mean_gross_weight": 0.9216397752294718
+      }
+    },
+    "hold_bps5_feenone": {
+      "ending": 218614.96513272554,
+      "pnl_vs_2200": 216414.96513272554,
+      "first_invested": "2005-01-04",
+      "slippage": 14598.020634649389,
+      "reg": 0.0,
+      "traded": 29196041.269298773,
+      "full": {
+        "available": true,
+        "start": "2005-01-04",
+        "end": "2026-11-06",
+        "n": 5496,
+        "equity_start": 2141.1495766408284,
+        "equity_end": 218614.96513272554,
+        "pnl": 216473.8155560847,
+        "total_return": 101.10167823758609,
+        "max_drawdown": -0.510577877514718,
+        "sharpe_zero_rf": 1.0624942779243354,
+        "years": 21.83709787816564,
+        "mean_gross_weight": 0.8835282524133006
+      },
+      "holdout": {
+        "available": true,
+        "start": "2023-01-03",
+        "end": "2026-10-07",
+        "n": 944,
+        "equity_start": 58918.49166691762,
+        "equity_end": 231071.28762301517,
+        "pnl": 172152.79595609754,
+        "total_return": 2.9218805689956304,
+        "max_drawdown": -0.32349692590111223,
+        "sharpe_zero_rf": 1.5356403580199518,
+        "years": 3.759069130732375,
+        "mean_gross_weight": 0.8874125171696019
+      },
+      "live_scale_window": {
+        "available": true,
+        "start": "2026-10-08",
+        "end": "2026-11-06",
+        "n": 22,
+        "equity_start": 230491.47424559543,
+        "equity_end": 218614.96513272554,
+        "pnl": -11876.509112869884,
+        "total_return": -0.051526891186504886,
+        "max_drawdown": -0.08666721149602474,
+        "sharpe_zero_rf": null,
+        "years": 0.07939767282683094,
+        "mean_gross_weight": 0.9217314481160943
+      }
+    },
+    "hold_bps10_feenone": {
+      "ending": 144472.5852865145,
+      "pnl_vs_2200": 142272.5852865145,
+      "first_invested": "2005-01-04",
+      "slippage": 20727.61938036522,
+      "reg": 0.0,
+      "traded": 20727619.380365223,
+      "full": {
+        "available": true,
+        "start": "2005-01-04",
+        "end": "2026-11-06",
+        "n": 5496,
+        "equity_start": 2140.1045766408283,
+        "equity_end": 144472.5852865145,
+        "pnl": 142332.4807098737,
+        "total_return": 66.50725495540175,
+        "max_drawdown": -0.5216397035475273,
+        "sharpe_zero_rf": 0.9773752766028567,
+        "years": 21.83709787816564,
+        "mean_gross_weight": 0.8836005623422241
+      },
+      "holdout": {
+        "available": true,
+        "start": "2023-01-03",
+        "end": "2026-10-07",
+        "n": 944,
+        "equity_start": 41510.36146235778,
+        "equity_end": 152898.60196471537,
+        "pnl": 111388.2405023576,
+        "total_return": 2.6833840173462744,
+        "max_drawdown": -0.3271108134594035,
+        "sharpe_zero_rf": 1.4707926141205796,
+        "years": 3.759069130732375,
+        "mean_gross_weight": 0.8874712163889027
+      },
+      "live_scale_window": {
+        "available": true,
+        "start": "2026-10-08",
+        "end": "2026-11-06",
+        "n": 22,
+        "equity_start": 152513.42356338174,
+        "equity_end": 144472.5852865145,
+        "pnl": -8040.838276867231,
+        "total_return": -0.052722167590222746,
+        "max_drawdown": -0.08726922823591066,
+        "sharpe_zero_rf": null,
+        "years": 0.07939767282683094,
+        "mean_gross_weight": 0.9218231775602099
+      }
+    },
+    "hold_bps5_feedisclosed": {
+      "ending": 217398.12337962535,
+      "pnl_vs_2200": 215198.12337962535,
+      "first_invested": "2005-01-04",
+      "slippage": 14528.761279818182,
+      "reg": 208.4135517684464,
+      "traded": 29057522.559636362,
+      "full": {
+        "available": true,
+        "start": "2005-01-04",
+        "end": "2026-11-06",
+        "n": 5496,
+        "equity_start": 2141.1495766408284,
+        "equity_end": 217398.12337962535,
+        "pnl": 215256.97380298452,
+        "total_return": 100.53336588501834,
+        "max_drawdown": -0.5107580644635268,
+        "sharpe_zero_rf": 1.061350111400911,
+        "years": 21.83709787816564,
+        "mean_gross_weight": 0.8835233096682776
+      },
+      "holdout": {
+        "available": true,
+        "start": "2023-01-03",
+        "end": "2026-10-07",
+        "n": 944,
+        "equity_start": 58632.66763467472,
+        "equity_end": 229791.10283053946,
+        "pnl": 171158.43519586473,
+        "total_return": 2.9191650678817744,
+        "max_drawdown": -0.32360415742934323,
+        "sharpe_zero_rf": 1.534952083247978,
+        "years": 3.759069130732375,
+        "mean_gross_weight": 0.8873987179195026
+      },
+      "live_scale_window": {
+        "available": true,
+        "start": "2026-10-08",
+        "end": "2026-11-06",
+        "n": 22,
+        "equity_start": 229214.45890943462,
+        "equity_end": 217398.12337962535,
+        "pnl": -11816.335529809265,
+        "total_return": -0.05155144045462701,
+        "max_drawdown": -0.08667941620846586,
+        "sharpe_zero_rf": null,
+        "years": 0.07939767282683094,
+        "mean_gross_weight": 0.9217334098984996
+      }
+    },
+    "flat_bps0_feenone": {
+      "ending": 234896.79616060504,
+      "pnl_vs_2200": 232696.79616060504,
+      "first_invested": "2005-01-04",
+      "slippage": 0.0,
+      "reg": 0.0,
+      "traded": 100702414.84026878,
+      "full": {
+        "available": true,
+        "start": "2005-01-04",
+        "end": "2026-11-06",
+        "n": 5496,
+        "equity_start": 2142.1945766408285,
+        "equity_end": 234896.79616060504,
+        "pnl": 232754.60158396422,
+        "total_return": 108.65240913313593,
+        "max_drawdown": -0.4888290890318895,
+        "sharpe_zero_rf": 1.1135318512540033,
+        "years": 21.83709787816564,
+        "mean_gross_weight": 0.7066842952892339
+      },
+      "holdout": {
+        "available": true,
+        "start": "2023-01-03",
+        "end": "2026-10-07",
+        "n": 944,
+        "equity_start": 66613.83443365923,
+        "equity_end": 250103.62209186866,
+        "pnl": 183489.78765820945,
+        "total_return": 2.7545297342243082,
+        "max_drawdown": -0.21739053778418937,
+        "sharpe_zero_rf": 1.544452496602493,
+        "years": 3.759069130732375,
+        "mean_gross_weight": 0.7081912280624522
+      },
+      "live_scale_window": {
+        "available": true,
+        "start": "2026-10-08",
+        "end": "2026-11-06",
+        "n": 22,
+        "equity_start": 249478.53499863695,
+        "equity_end": 234896.79616060504,
+        "pnl": -14581.738838031917,
+        "total_return": -0.058448871515585865,
+        "max_drawdown": -0.08377898314651444,
+        "sharpe_zero_rf": null,
+        "years": 0.07939767282683094,
+        "mean_gross_weight": 0.7769052527135876
+      }
+    },
+    "flat_bps5_feenone": {
+      "ending": 61680.993033442384,
+      "pnl_vs_2200": 59480.993033442384,
+      "first_invested": "2005-01-04",
+      "slippage": 16859.25798005124,
+      "reg": 0.0,
+      "traded": 33718515.96010248,
+      "full": {
+        "available": true,
+        "start": "2005-01-04",
+        "end": "2026-11-06",
+        "n": 5496,
+        "equity_start": 2141.1495766408284,
+        "equity_end": 61680.993033442384,
+        "pnl": 59539.84345680156,
+        "total_return": 27.807419017503413,
+        "max_drawdown": -0.5196373912683454,
+        "sharpe_zero_rf": 0.8267780418922723,
+        "years": 21.83709787816564,
+        "mean_gross_weight": 0.7068303010482122
+      },
+      "holdout": {
+        "available": true,
+        "start": "2023-01-03",
+        "end": "2026-10-07",
+        "n": 944,
+        "equity_start": 21960.167034655242,
+        "equity_end": 65985.90231569212,
+        "pnl": 44025.735281036876,
+        "total_return": 2.0047996543723943,
+        "max_drawdown": -0.22394920253546424,
+        "sharpe_zero_rf": 1.3052776153433105,
+        "years": 3.759069130732375,
+        "mean_gross_weight": 0.7083315750216417
+      },
+      "live_scale_window": {
+        "available": true,
+        "start": "2026-10-08",
+        "end": "2026-11-06",
+        "n": 22,
+        "equity_start": 65820.32789749527,
+        "equity_end": 61680.993033442384,
+        "pnl": -4139.334864052886,
+        "total_return": -0.06288839627932641,
+        "max_drawdown": -0.08498298665860804,
+        "sharpe_zero_rf": null,
+        "years": 0.07939767282683094,
+        "mean_gross_weight": 0.777080217070631
+      }
+    },
+    "flat_bps10_feenone": {
+      "ending": 16193.599229066374,
+      "pnl_vs_2200": 13993.599229066374,
+      "first_invested": "2005-01-04",
+      "slippage": 12291.790818293375,
+      "reg": 0.0,
+      "traded": 12291790.818293374,
+      "full": {
+        "available": true,
+        "start": "2005-01-04",
+        "end": "2026-11-06",
+        "n": 5496,
+        "equity_start": 2140.1045766408283,
+        "equity_end": 16193.599229066374,
+        "pnl": 14053.494652425547,
+        "total_return": 6.5667326755051985,
+        "max_drawdown": -0.6018722774254128,
+        "sharpe_zero_rf": 0.5402180386141321,
+        "years": 21.83709787816564,
+        "mean_gross_weight": 0.7069611629545778
+      },
+      "holdout": {
+        "available": true,
+        "start": "2023-01-03",
+        "end": "2026-10-07",
+        "n": 944,
+        "equity_start": 7237.558055926056,
+        "equity_end": 17406.094436877152,
+        "pnl": 10168.536380951096,
+        "total_return": 1.4049678499815528,
+        "max_drawdown": -0.2306055777335484,
+        "sharpe_zero_rf": 1.0659690200960648,
+        "years": 3.759069130732375,
+        "mean_gross_weight": 0.7084714867817951
+      },
+      "live_scale_window": {
+        "available": true,
+        "start": "2026-10-08",
+        "end": "2026-11-06",
+        "n": 22,
+        "equity_start": 17362.245466446468,
+        "equity_end": 16193.599229066374,
+        "pnl": -1168.6462373800932,
+        "total_return": -0.06730962533841423,
+        "max_drawdown": -0.08882282270530295,
+        "sharpe_zero_rf": null,
+        "years": 0.07939767282683094,
+        "mean_gross_weight": 0.777255366972685
+      }
+    },
+    "flat_bps5_feedisclosed": {
+      "ending": 60452.94391297418,
+      "pnl_vs_2200": 58252.94391297418,
+      "first_invested": "2005-01-04",
+      "slippage": 16587.389687414343,
+      "reg": 235.0144246099408,
+      "traded": 33174779.374828685,
+      "full": {
+        "available": true,
+        "start": "2005-01-04",
+        "end": "2026-11-06",
+        "n": 5496,
+        "equity_start": 2141.1495766408284,
+        "equity_end": 60452.94391297418,
+        "pnl": 58311.794336333354,
+        "total_return": 27.233872389156765,
+        "max_drawdown": -0.5211158685690511,
+        "sharpe_zero_rf": 0.8224633827422129,
+        "years": 21.83709787816564,
+        "mean_gross_weight": 0.7068310147099108
+      },
+      "holdout": {
+        "available": true,
+        "start": "2023-01-03",
+        "end": "2026-10-07",
+        "n": 944,
+        "equity_start": 21593.22958437771,
+        "equity_end": 64678.42883210296,
+        "pnl": 43085.19924772525,
+        "total_return": 1.99531057081413,
+        "max_drawdown": -0.2241329881957539,
+        "sharpe_zero_rf": 1.3018764733737982,
+        "years": 3.759069130732375,
+        "mean_gross_weight": 0.7083321925644476
+      },
+      "live_scale_window": {
+        "available": true,
+        "start": "2026-10-08",
+        "end": "2026-11-06",
+        "n": 22,
+        "equity_start": 64516.12311689109,
+        "equity_end": 60452.94391297418,
+        "pnl": -4063.1792039169086,
+        "total_return": -0.06297928343516845,
+        "max_drawdown": -0.08505284003936708,
+        "sharpe_zero_rf": null,
+        "years": 0.07939767282683094,
+        "mean_gross_weight": 0.7770816273252884
+      }
+    }
+  },
+  "history_dollar_difference": [
+    {
+      "bps": 0,
+      "hold_pnl": 328982.8973219382,
+      "flat_pnl": 232696.79616060504,
+      "flat_minus_hold": -96286.10116133315
+    },
+    {
+      "bps": 5,
+      "hold_pnl": 216414.96513272554,
+      "flat_pnl": 59480.993033442384,
+      "flat_minus_hold": -156933.97209928316
+    },
+    {
+      "bps": 10,
+      "hold_pnl": 142272.5852865145,
+      "flat_pnl": 13993.599229066374,
+      "flat_minus_hold": -128278.98605744814
+    }
+  ],
+  "history_gap_distribution_hold_0bps": {
+    "full": {
+      "n": 1192,
+      "mean": 0.00034254855910968273,
+      "median": 0.0005714407493674024,
+      "std": 0.008704050035814427,
+      "t_stat_vs_zero": 1.358747924857797,
+      "pct_negative": 0.4085570469798658,
+      "pct_positive": 0.5469798657718121,
+      "p05": -0.01274515618870207,
+      "p95": 0.012139358538335683,
+      "sum": 0.4083178824587418,
+      "worst": -0.07424254092605401,
+      "best": 0.048849599461726574
+    },
+    "holdout": {
+      "n": 196,
+      "mean": 0.0006201078229675486,
+      "median": 0.0011262427718018262,
+      "std": 0.01068126874129454,
+      "t_stat_vs_zero": 0.812778868486133,
+      "pct_negative": 0.4336734693877551,
+      "pct_positive": 0.5663265306122449,
+      "p05": -0.014358132986365473,
+      "p95": 0.014553654759308733,
+      "sum": 0.12154113330163951,
+      "worst": -0.06963808042140729,
+      "best": 0.0344945535919727
+    },
+    "from_2026_10_08": {
+      "n": 4,
+      "mean": 0.0005123810025246785,
+      "median": 0.002339615361485597,
+      "std": 0.006784417442315345,
+      "t_stat_vs_zero": 0.15104642568981316,
+      "pct_negative": 0.25,
+      "pct_positive": 0.75,
+      "p05": -0.007538663975313817,
+      "p95": 0.006005297877817887,
+      "sum": 0.002049524010098714,
+      "worst": -0.009197510413413783,
+      "best": 0.006567803700541303
+    }
+  },
+  "live_observed": {
+    "plan_rows": 22727,
+    "first_plan_et": "2026-10-20 03:15:48-04:00",
+    "last_plan_et": "2026-11-06 22:07:59-05:00",
+    "events_start": "2026-10-18 13:34 ET. The 2026-10-10 runner backup still called --strategy a73. No A242 plan exists for 2026-10-08.",
+    "weekends": [
+      {
+        "friday": "2026-10-23 00:00:00",
+        "next_open": "2026-10-26 00:00:00",
+        "snapshot_et": "2026-10-23 23:57:59-04:00",
+        "after_close": true,
+        "names": "AMD,CSCO,MRK,XOM",
+        "gap_pnl": 6.725146610327392,
+        "gross_notional": 2164.8632350607463,
+        "gap_return_on_gross": 0.003106499524501687
+      },
+      {
+        "friday": "2026-10-30 00:00:00",
+        "next_open": "2026-11-02 00:00:00",
+        "snapshot_et": "2026-10-30 23:58:08-04:00",
+        "after_close": true,
+        "names": "AMD,MRK,XOM",
+        "gap_pnl": -14.658379137638903,
+        "gross_notional": 1707.1090252824038,
+        "gap_return_on_gross": -0.008586668408723335
+      },
+      {
+        "friday": "2026-11-06 00:00:00",
+        "next_open": "2026-11-09 00:00:00",
+        "snapshot_et": "2026-11-06 22:07:59-05:00",
+        "after_close": true,
+        "names": "AMD,CVX,MRK,XOM",
+        "gap_pnl": 3.4110084059500583,
+        "gross_notional": 2048.3235496238003,
+        "gap_return_on_gross": 0.0016652683637682787
+      }
+    ],
+    "costs": [
+      {
+        "bps_per_side": 0,
+        "weekend_gap_pnl_if_held": -4.522224121361453,
+        "round_trip_spread": 0.0,
+        "regulatory_on_flatten_sale": 0.12195809368531918,
+        "flat_minus_hold_after_spread": 4.522224121361453,
+        "flat_minus_hold_after_spread_and_reg_fee": 4.400266027676134
+      },
+      {
+        "bps_per_side": 5,
+        "weekend_gap_pnl_if_held": -4.522224121361453,
+        "round_trip_spread": 5.92029580996695,
+        "regulatory_on_flatten_sale": 0.12189711463847654,
+        "flat_minus_hold_after_spread": -1.398071688605497,
+        "flat_minus_hold_after_spread_and_reg_fee": -1.5199688032439735
+      },
+      {
+        "bps_per_side": 10,
+        "weekend_gap_pnl_if_held": -4.522224121361453,
+        "round_trip_spread": 11.8405916199339,
+        "regulatory_on_flatten_sale": 0.12183613559163388,
+        "flat_minus_hold_after_spread": -7.318367498572447,
+        "flat_minus_hold_after_spread_and_reg_fee": -7.440203634164081
+      }
+    ],
+    "verified_equity_change_oct8_to_nov9": -92.78999999999996
+  }
+}
