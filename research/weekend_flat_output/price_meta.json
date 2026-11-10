@@ -1,0 +1,226 @@
+{
+  "source": "Yahoo Finance chart API v8, interval=1d, includeAdjustedClose=true",
+  "url_template": "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}",
+  "downloaded_at_utc": "2026-11-08T02:37:57.970175+00:00",
+  "request_start": "2004-01-01",
+  "request_end_exclusive": "2026-11-09",
+  "symbols": {
+    "AAPL": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 57,
+      "n_splits": 3
+    },
+    "MSFT": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 89,
+      "n_splits": 0
+    },
+    "NVDA": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 56,
+      "n_splits": 4
+    },
+    "AMZN": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 0,
+      "n_splits": 1
+    },
+    "META": {
+      "rows": 3639,
+      "start": "2012-05-18",
+      "end": "2026-11-06",
+      "n_dividends": 11,
+      "n_splits": 0
+    },
+    "GOOGL": {
+      "rows": 5591,
+      "start": "2004-08-19",
+      "end": "2026-11-06",
+      "n_dividends": 10,
+      "n_splits": 2
+    },
+    "AVGO": {
+      "rows": 4341,
+      "start": "2009-08-06",
+      "end": "2026-11-06",
+      "n_dividends": 64,
+      "n_splits": 1
+    },
+    "TSLA": {
+      "rows": 4116,
+      "start": "2010-06-29",
+      "end": "2026-11-06",
+      "n_dividends": 0,
+      "n_splits": 2
+    },
+    "JPM": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 92,
+      "n_splits": 0
+    },
+    "V": {
+      "rows": 4690,
+      "start": "2008-03-19",
+      "end": "2026-11-06",
+      "n_dividends": 73,
+      "n_splits": 1
+    },
+    "MA": {
+      "rows": 5146,
+      "start": "2006-05-25",
+      "end": "2026-11-06",
+      "n_dividends": 81,
+      "n_splits": 1
+    },
+    "UNH": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 73,
+      "n_splits": 1
+    },
+    "XOM": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 91,
+      "n_splits": 0
+    },
+    "COST": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 96,
+      "n_splits": 0
+    },
+    "HD": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 91,
+      "n_splits": 0
+    },
+    "PG": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 92,
+      "n_splits": 1
+    },
+    "JNJ": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 91,
+      "n_splits": 0
+    },
+    "ABBV": {
+      "rows": 3484,
+      "start": "2013-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 56,
+      "n_splits": 0
+    },
+    "NFLX": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 0,
+      "n_splits": 3
+    },
+    "CRM": {
+      "rows": 5631,
+      "start": "2004-06-23",
+      "end": "2026-11-06",
+      "n_dividends": 11,
+      "n_splits": 1
+    },
+    "AMD": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 0,
+      "n_splits": 0
+    },
+    "ORCL": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 70,
+      "n_splits": 0
+    },
+    "BAC": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 91,
+      "n_splits": 1
+    },
+    "KO": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 91,
+      "n_splits": 1
+    },
+    "PEP": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 91,
+      "n_splits": 0
+    },
+    "WMT": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 91,
+      "n_splits": 1
+    },
+    "CVX": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 91,
+      "n_splits": 1
+    },
+    "MRK": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 91,
+      "n_splits": 1
+    },
+    "CSCO": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 63,
+      "n_splits": 0
+    },
+    "ADBE": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 6,
+      "n_splits": 1
+    },
+    "SPY": {
+      "rows": 5749,
+      "start": "2004-01-02",
+      "end": "2026-11-06",
+      "n_dividends": 92,
+      "n_splits": 0
+    }
+  }
+}
